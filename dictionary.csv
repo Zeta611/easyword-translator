@@ -1,0 +1,968 @@
+,name,name_trans
+0,soundness,안전함
+1,soundness,믿을만함
+2,soundness,안전성
+3,soundness,올바름
+4,recursive primitive definition,원시적 자기참조 정의
+5,signature matching,모듈타입에 맞추기
+6,signature matching,모듈타입에 대보기
+7,mutable,변할수있는
+8,mutable,가변 
+9,abstraction,핵심 드러내기
+10,abstraction,속내용 감추기
+11,abstraction,요약
+12,runtime,실행중
+13,runtime,실행환경
+14,runtime,실행 와중
+15,runtime,실행시간
+16,normal form,바른꼴
+17,normal form,표준형
+18,effect type,값종류 이외의 성질을 추적하는 타입
+19,effect type,기타성질을 추적하는 타입
+20,unary,인자가 하나인
+21,structure bind,모듈 정의
+22,method overloading,여러함수를 같은 이름으로
+23,calculus,계산법
+24,calculus,셈법
+25,tree,가지구조
+26,tree,나무구조
+27,functor signature instantiation,모듈함수 타입의 실현
+28,interpreter,실행기
+29,eager evaluation,적극적인 계산법
+30,eager evaluation,바로계산
+31,eager evaluation,부지런한 계산
+32,eager evaluation,적극적인 계산
+33,eager evaluation,부지런한 계산법
+34,abstract type,핵심만 드러낸 타입
+35,abstract type,구현된 속사정이 감추어진 타입
+36,abstract type,속내용이 감추어진 타입
+37,refactoring,코드 정리정돈하기
+38,refactoring,코드정리하기
+39,rewrite rule,다시쓰기 규칙
+40,function application,함수 사용
+41,function application,함수 호출
+42,memoization,기억해두기
+43,memoization,메모해두기
+44,monolithic,일체형
+45,monolithic,단조로운
+46,monolithic,"통짜, 통짜형"
+47,monolithic,"하나로, 한통으로"
+48,formal,엄밀 
+49,hashing,외따로보내버리기
+50,hashing,다른세상에서멀리대응시키기
+51,hashing,으깨기
+52,hashing,멀리대응시키기
+53,cost-ineffective,품이 많이 드는
+54,cost-ineffective,비용이 아까운
+55,cost-ineffective,돈이 아까운
+56,cost-ineffective,가성비 나쁜
+57,universal machine,보편만능 기계
+58,insertion sort,끼워넣기 정렬
+59,signature instantiation,모듈 타입의 실현
+60,kind,타입의 타입
+61,applicative language,계산중심 언어
+62,applicative language,함수형 언어
+63,applicative language,값중심 언어
+64,garbage collection,메모리 재활용
+65,garbage collection,메모리 우렁각시
+66,garbage collection,메모리 수거
+67,garbage collection,노는 메모리 자동 수거
+68,garbage collection,자원 재활용
+69,garbage collection,스마트 로봇 청소기
+70,garbage collection,"쓰레기통 비우기, 휴지통 비우기"
+71,Sparse Reward,드물게 발생하는 보상
+72,Sparse Reward,드문 보상
+73,substitution,바꿔치기
+74,immutable,변할수없는
+75,immutable,불변 
+76,decision procedure,예-아니오 판정 프로그램
+77,decision procedure,예-아니오 판정 알고리즘
+78,pointer,주소 변수
+79,pointer,메모리주소
+80,object-oriented language,물건중심 언어
+81,object-oriented language,메세지 중심 언어
+82,well-founded,탄탄한
+83,well-founded,바닥이 있는
+84,well-founded,바닥이 갖추어진
+85,well-founded,올바르게 기초한
+86,separated sum,출신기억 합집합
+87,separated sum,출신을 기억하는 합집합
+88,principal type,가장 일반적인 타입
+89,principal type,대표 타입
+90,cross compilation,번역 
+91,hazard pointer,에비에비 포인터
+92,container,컨테이너
+93,container,수송용기
+94,static scope,미리 결정된 이름의 유효범위
+95,static scope,정적 유효범위
+96,type scheme instantiation,타입 틀 적용
+97,type scheme instantiation,타입 틀 구체화
+98,predicate logic,모든-어떤 논리
+99,predicate logic,술어 논리
+100,differential,차이 
+101,declaration,선언
+102,convex programming,볼록 프로그래밍
+103,call by reference,주소전달 호출
+104,non-expansive,새 메모리를 쓰지않는
+105,predicate abstraction,논리식 요약
+106,predicate abstraction,논리조건의 요약
+107,predicate abstraction,조건식 요약
+108,predicate abstraction,논리식을 변수 하나로 요약하기
+109,predicate abstraction,논리조건을 변수 하나로 요약하기
+110,predicate abstraction,조건식을 변수 하나로 요약하기
+111,compilation,프로그램 번역
+112,compilation,언어의 기계어 변환
+113,signature,모듈타입
+114,decision problem,예-아니오 문제
+115,abstract semantics,요약 의미
+116,abstract semantics,요약된 의미구조
+117,primitive recursive function,기본적인 재귀함수
+118,primitive recursive function,원시적인 재귀함수
+119,parsing,문장구조복구하기
+120,parsing,문장모양확인하기
+121,parsing,쪼개서 이해하기
+122,parsing,문장구조확인하기
+123,functional style,함수형 스타일
+124,functional style,함수중심 스타일
+125,functional style,값중심 스타일
+126,typing rule,타입 결정 규칙
+127,typing rule,타입 유추 규칙
+128,function abstraction,함수로 핵심 간추리기
+129,function abstraction,함수
+130,function abstraction,함수로 속내용 감추기
+131,function abstraction,함수로 만들기
+132,value,값
+133,metalanguage,언어를 설명하는 언어
+134,metalanguage,메타언어
+135,static semantics,정적 의미구조
+136,static semantics,프로그램의 타입 의미구조
+137,static semantics,프로그램 기획
+138,bottom-up program synthesis,작은 식 조립해서 큰 프로그램 합성하기
+139,bottom-up program synthesis,조립식으로 합성하기
+140,bottom-up program synthesis,재료부터 정해서 프로그램 요리하기
+141,bottom-up program synthesis,바닥부터 프로그램 합성해가기
+142,bottom-up program synthesis,부품에서 전체로 프로그램 합성하기
+143,loader,사다리차
+144,loader,적재기
+145,bi-variant,양쪽변환
+146,bi-variant,맞춰거슬러 변하기
+147,bubble sort,거품 정렬
+148,bubble sort,뽀글뽀글정렬
+149,built-in,붙박이
+150,built-in,이미 있는
+151,free variable,정해지지않은 변수
+152,free variable,자유로운 변수
+153,free variable,묶이지않은 변수
+154,free variable,자유변수
+155,free variable,실체없는 변수
+156,free variable,정의안된 변수
+157,univerally quantified type,아무거나되는타입
+158,univerally quantified type,아무거나 되는 타입
+159,univerally quantified type,타입변수가 모든 타입으로 바꿔치기될 수 있는
+160,semantics,의미망
+161,semantics,뜻
+162,semantics,속내용
+163,semantics,의미구조
+164,semantics,의미
+165,weakly consistent memory,"굼뜬 메모리, 느긋한 메모리, 느슨한 메모리, 시간순서가 느슨한 메모리, 옛값과 새값의 경계가 느슨한 메모리"
+166,weakly consistent memory,약한 메모리
+167,dead code,"없애도되는 코드, 없애도 되는 코드"
+168,dead code,죽은 코드
+169,dead code,쓸데없는 코드
+170,dead code,무용지물 코드
+171,string,글자실
+172,string,문자열
+173,variant type,모듬타입
+174,variant type,모둠 타입
+175,variant type,이런저런 타입
+176,variant type,가지 타입
+177,variant type,갈래 타입
+178,local definition,우물안 정의
+179,local definition,그동네 정의
+180,subtype,아래타입
+181,subtype,하위타입
+182,reference,메모리 주소
+183,reference,지목값
+184,reference,인용 
+185,abstract class,클래스 허물
+186,abstract class,껍데기 클래스
+187,abstract class,클래스 껍데기
+188,abstract class,허물 클래스
+189,recursive,자기호출
+190,recursive,자기자신을 부르는
+191,sequence,일렬
+192,sequence,나열
+193,null,없는 주소
+194,null,헛 주소
+195,polymorphic function,다형 함수
+196,polymorphic function,인자 타입에 상관없는 함수
+197,predicate,조건식
+198,predicate,논리식
+199,predicate,논리조건
+200,separation logic,따로논리
+201,separation logic,분리논리
+202,free identifier,묶이지않은 이름
+203,free identifier,정의안된 이름
+204,free identifier,실체없는 이름
+205,free identifier,자유로운 이름
+206,assignment,값 기록하기
+207,assignment,기록하기
+208,assignment,메모리에 쓰기
+209,compositional,조립식
+210,statement,구문 
+211,statement,컴터문
+212,statement,"프로그램문, 프로그램식, 글, 문장"
+213,query,"뭐냐, 물음, 묻기, 알아봐죠"
+214,query,퀴어리
+215,expression,프로그램식
+216,expression,식
+217,expression,계산식
+218,call by value,값전달 호출
+219,call by value,적용 먼저
+220,lexical conventions,어휘 만드는 방법
+221,coverage,덮는 범위
+222,coverage,흔적  
+223,coverage,보장범위
+224,coverage,진도 
+225,coverage,커버한범위
+226,coverage,짚은범위
+227,allocation,메모리 할당
+228,or-pattern,무더기 패턴
+229,null pointer,텅빈주소
+230,null pointer,공포인터
+231,null pointer,빈 포인터
+232,null pointer,갈곳없는 포인터
+233,null pointer,길잃은 주소
+234,grammar,문법
+235,cost-effective,"비용이 아깝지않은, 돈이 안아까운"
+236,cost-effective,품이 아깝지않은
+237,cost-effective,가성비 좋은
+238,call by name,인자 먼저
+239,call by name,식전달 호출
+240,rewrite semantics,다시쓰기로 정의한 의미구조
+241,logical relation,타입구조를 타고 정의되는 관계
+242,logical relation,논리 관계
+243,logical relation,타입구조를 타고 조립되는 관계
+244,term,항   
+245,term,식
+246,term,표현항
+247,exception,예외
+248,exception,예외상황
+249,interpretation,실행
+250,linearizable,줄세울 수 있는
+251,statically typed language,실행전에 타입검사하는 언어
+252,statically typed language,계산전에 타입검사하는 언어
+253,statically typed language,미리 타입검사하는 언어
+254,type abbreviation,타입 줄임말
+255,type realization,타입 틀 실현
+256,exception handling,예외상황 처리
+257,exception handling,예외처리
+258,infix,사이끼기
+259,pattern match,패턴에 맞추기
+260,pattern match,패턴에 대보기
+261,halting problem,멈춤문제
+262,digit,숫자
+263,complete,완전한
+264,complete,빠뜨림이 없는
+265,complete,빠뜨린게 없는
+266,structure,모듈
+267,non-deterministic polynomial,모든가지를 한꺼번에 다할때 다항시간에 풀리는
+268,non-deterministic polynomial,운에 기대면 다항시간 안에 풀리는
+269,supertype,상위타입
+270,supertype,위타입
+271,computation strategy,계산 방식
+272,computation strategy,계산 전략
+273,memory leak,메모리 누수
+274,memory leak,재활용 놓치기
+275,null dereference,없는주소 접근
+276,null dereference,헛주소 접근
+277,control flow grpah,실행흐름도
+278,type variable,타입 변수
+279,error,오류
+280,context switching,맥락 전환
+281,formal verification,엄검증
+282,formal verification,엄격하게 검증하기
+283,formal verification,찐검증
+284,formal verification,엄격한 검증
+285,unification,동일화
+286,unification,통일하기
+287,unification,같게 만들기
+288,sharding,여러 창고에 나누어 보관하는
+289,type,타입
+290,total function,완전 정의 함수
+291,total function,완전히 정의된 함수
+292,total function,다덤벼 함수
+293,total function,전체 함수
+294,lexicographic order,가나다 순서
+295,lexicographic order,사전적 순서
+296,static type,실행전에 파악된 타입
+297,type bind,타입 정의
+298,ordered relation,순서 관계
+299,specification,설명서
+300,specification,사양 
+301,specification,명세
+302,specification,요구사항
+303,co-variant,"발맞춰 변하기, 발맞춰 변하는, 맞춰 변하기, 맞춰 변하는"
+304,co-variant,같이 변환
+305,co-variant,같은쪽변환
+306,co-variant,맞춰 변하기
+307,destructive,메모리값을 변동시키는
+308,destructive,저장값을 변동시키는
+309,invariant,변함없는 성질
+310,invariant,무변환
+311,invariant,불변성질
+312,invariant,항상성질
+313,invariant,꾸준한 성질
+314,imperative language,행동지침형 언어
+315,imperative language,기계중심 언어
+316,imperative language,명령형 언어
+317,computational learning theory,계산 학습 이론
+318,existentially quantified type,아무튼있는타입
+319,existentially quantified type,타입변수가 어떤 타입으로 바꿔치기될 수 있는
+320,liveness property,결국 성질
+321,liveness property,진행하는 성질
+322,liveness property,결국에는 일어날 성질
+323,liveness property,언젠간 성질
+324,liveness property,언젠가는 일어날 성질 
+325,wild pattern,뭐든다 패턴
+326,wild pattern,임의 패턴
+327,Cartesian product,모든쌍
+328,Cartesian product,데카르트 곱
+329,Cartesian product,완전곱
+330,continuation passing style,"마저 할 일 전달하는, 마저할일 전달하는"
+331,continuation passing style,앞으로 할 일을 함수로 표현해서 전달하는
+332,continuation passing style,계산과정을 전달하는
+333,continuation passing style,앞으로 할 일 전달하는
+334,context,상황
+335,context,문맥
+336,context,환경
+337,induction,귀납법
+338,induction,짐작해서 이끌기
+339,induction,인덕
+340,just-in time compiler,벼락치기 번역기
+341,just-in time compiler,그때그때 번역기
+342,just-in time compiler,제때 번역기
+343,just-in time compiler,때맞춰 작동하는 번역기
+344,just-in time compiler,실행때 번역기
+345,just-in time compiler,때맞춘 번역기
+346,just-in time compiler,바로바로 번역기
+347,side-effect,부수효과
+348,side-effect,메모리 반응
+349,side-effect,따라 일어나는 일
+350,side-effect,수반되는 효과
+351,side-effect,함께오는 효과
+352,lexical analysis,문자열거르고분류하기
+353,lexical analysis,낱말파악하기
+354,definitional interpreter,언어의미를 실행기에 맡기기/언어의미를 실행기로 갈음하기
+355,definitional interpreter,실행기
+356,definitional interpreter,실행시켜 알아보는 의미정의
+357,top-level declaration,가장 위 선언
+358,disjunction,또는-식
+359,dynamic semantics,동적 의미구조
+360,dynamic semantics,프로그램 실행
+361,dynamic semantics,프로그램 실행 의미구조
+362,spanning tree,다 덮는 나무
+363,spanning tree,전부 덮는 나무
+364,computation,계산
+365,computation,연산 
+366,function overloading,여러함수를 같은 이름으로
+367,functional language,값중심 언어
+368,functional language,함수형 언어
+369,functional language,함수중심 언어
+370,precedence,우선순위
+371,identity function,일없는 함수
+372,denial-of-service,체증 
+373,denial-of-service,길막. 
+374,denial-of-service,업무방해
+375,type structure,타입 구조
+376,type inference,타입유추
+377,type inference,타입 유추하기
+378,type inference,타입 알아내기
+379,ramdomized algorithm,무작위 알고리즘
+380,operator,연산자
+381,overhead,부담  
+382,overhead,치른비용
+383,overhead,비용  
+384,overhead,따름비용
+385,concrete syntax,문장구조 파악방법
+386,concrete syntax,문장구조 복원법
+387,concrete syntax,문장구조 파악규칙
+388,concrete syntax,구체적 문법구조
+389,concrete syntax,문장구조 파악법
+390,concrete syntax,문장구조 복원규칙
+391,concrete syntax,문장구조 복원방법
+392,abduction,앱덕
+393,abduction,원인 짐작하기
+394,attribute grammar,할일딸린 문법
+395,attribute grammar,할일이 딸려있는 문법
+396,attribute grammar,일거리딸린 문법
+397,attribute grammar,일거리가 딸려있는 문법
+398,homomorphic encryption,암호문안에서 연산가능한 암호체계
+399,homomorphic encryption,동형암호
+400,interface,접속방안
+401,interface,"나들목,  길목, 사이"
+402,interface,사용법
+403,interface,접속형태
+404,interface,허물
+405,lazy evaluation,미룬계산
+406,lazy evaluation,값 계산을 최대한 미루는
+407,lazy evaluation,소극적 계산법
+408,lazy evaluation,제때 계산법
+409,lazy evaluation,필요한 때만 값을 계산하는
+410,machine learning,기계 학습
+411,module,모듈
+412,concatenation,이어붙이기
+413,exception bind,예외상황 정의
+414,curried function,여러인자를 줄세워 받는 함수
+415,curried function,커리형 함수
+416,curried function,야금야금 함수
+417,curried function,여러인자를 야금야금 받는 함수
+418,partial function,일부만 정의된 함수
+419,partial function,일부만 함수
+420,partial function,부분 정의 함수
+421,prefix,앞에 붙는
+422,pseudocode,대강코드
+423,pseudocode,의사코드
+424,pseudocode,유사코드
+425,gradual typing,조금씩 타입 붙이기
+426,gradual typing,실행전과 실행중 타입검사 섞어하기
+427,non-deterministic,모든가지를 한꺼번에 다하는
+428,non-deterministic,계산이 모든가지로 퍼지는
+429,non-deterministic,운에 기대는
+430,non-deterministic,한가지로 정해지지 않은
+431,functional programming,함수형 프로그래밍
+432,functional programming,값중심 프로그래밍
+433,structure description,모듈 접속방안
+434,complete partial-order set,완전한 부분순서 집합
+435,strict evaluation,적극적 계산법
+436,strict evaluation,일단 값을 계산하고 보는
+437,monkey patch,기습 바꾸기
+438,closure,함수값
+439,closure,"다된함수, 닫힌함수"
+440,closure,오므린함수
+441,out-of-order,"순서없는, 뒤죽박죽인, 순서를 따르지않는"
+442,out-of-order,위아래가 없는
+443,out-of-order,새치기
+444,out-of-order,비순차
+445,axiomatic theory,공리에 기초한 이론
+446,axiomatic theory,엄밀한 이론
+447,mode,양식 
+448,abstract syntax,뼈대 구문
+449,abstract syntax,본질 문법
+450,abstract syntax,문장 조립규칙
+451,abstract syntax,문장 조립법
+452,abstract syntax,요약한 구조
+453,abstract syntax,문장 구성방법
+454,abstract syntax,문장 구성법
+455,abstract syntax,핵심 문법구조
+456,abstract syntax,문장 조립방법
+457,abstract syntax,문장 구성규칙
+458,refinement type,다듬어가는 타입
+459,type scheme,타입 틀
+460,gray-box,반투명
+461,template,거푸집
+462,symbol,심벌
+463,fault,결함 
+464,environment,환경
+465,environment,이름의 실체를 보여주는 목록
+466,environment,이름표 목록
+467,rewrite,바꿔쓰기
+468,rewrite,다시쓰기
+469,rewrite,재작성
+470,type expression,타입식
+471,application,"응용, 활용"
+472,application,호출
+473,application,사용
+474,application,(함수) 적용
+475,parameter,매개변수
+476,parameter,인자
+477,abstract machine,"실행기계, 언어실행기, 기계어실행기"
+478,syntax analysis,겉모양 분석
+479,syntax analysis,생김새 분석
+480,syntax analysis,문법 구조 분석
+481,delimiter,구별문자
+482,delimiter,구분문자
+483,linear type,일회성인지 추적하는 타입
+484,linear type,선형 타입
+485,sparse data structure,거의 빈 데이타구조
+486,sparse data structure,듬성듬성한 데이타구조
+487,dynamic programming,이어받기 계산법
+488,dynamic programming,물려받기 계산법
+489,dynamic programming,기억하며 풀기
+490,dynamic programming,계승 계산법
+491,top-down program synthesis,메뉴부터 정해서 프로그램 요리하기
+492,top-down program synthesis,빈칸메꾸기로 합성하기
+493,top-down program synthesis,전체에서 부품으로 프로그램 합성하기
+494,top-down program synthesis,위에서부터 프로그램 합성해하기
+495,top-down program synthesis,큰 틀을 먼저 정하면서 프로그램 합성하기
+496,top-down program synthesis,아래로 합성
+497,type scheme generalization,타입 틀로 일반화하기
+498,type scheme generalization,타입 틀 만들기
+499,skolemization,안전하게 정량자 제거하기
+500,skolemization,안전한 정량자 제거
+501,borrowing,빌리기
+502,linker,모르는것없게하기
+503,linker,결합기
+504,linker,합체기
+505,linker,번역조립기
+506,predecessor,"앞에것, 이전것"
+507,predecessor,바로전 원소
+508,bind,정의하다
+509,bind,이름짓다
+510,black-box,불투명
+511,bounded quantification,울타리안에서 일반화시키기
+512,bounded quantification,한정해서 일반화시키기
+513,successor,후임
+514,successor,다음것
+515,successor,뒤에것
+516,successor,바로뒤 원소
+517,record,기록판
+518,record,레코드
+519,backend,속  
+520,backend,속
+521,backend,뒷단 
+522,backend,속내용
+523,tuple,모음
+524,tuple,짝
+525,tuple,줄모임
+526,negation,뒤집기
+527,closure conversion,함수의 자유변수를 없애주는 변환
+528,closure conversion,함수가 인자를 통해서만 외부와 소통하게 하는 변환
+529,closure conversion,함수 변환
+530,compilation unit,번역 단위
+531,compilation unit,컴파일 단위
+532,informal verification,가검증
+533,informal verification,느낌검증
+534,informal verification,감검증
+535,reference manual,참고서
+536,high-order function,함수를 주고받는 함수
+537,high-order function,고차 함수
+538,type system,타입 시스템
+539,conjunction,그리고-식
+540,constraint expression,제약식
+541,fairness,"골고루, 공평, 두루빠짐없이"
+542,reasoning,이치따지기
+543,heap profiler,메모리 사용 측량기
+544,heap profiler,메모리 사용 계측기
+545,curried application,커리형 함수 적용
+546,curried application,여러인자를 줄세워 전달하기
+547,curried application,함수를 야금야금 적용하기
+548,iteration,반복
+549,leaf,"잎, 이파리"
+550,leaf,말단노드
+551,abstract interpretation,요약해석
+552,diff-time,변경 시점
+553,fuzzing,마구잡이 sw깨기
+554,fuzzing,실행탐험
+555,fuzzing,sw고장내기
+556,fuzzing,마구넣기
+557,fuzzing,마구잡이 깨기
+558,fuzzing,마구실행
+559,protocol,약속 
+560,overflow,"계산넘침, 스택넘침"
+561,overflow,넘침 
+562,top declaration,가장 위 선언
+563,collecting semantics,"모듬의미구조, 모듬 의미구조"
+564,syntax,생김새
+565,syntax,문법구조
+566,syntax,겉모양
+567,syntax,문법
+568,white-box,투명 
+569,pattern,패턴
+570,identifier,이름
+571,test-driven development,테스트중심 개발
+572,test-driven development,해보기 전에 채점하며 개발하기
+573,merge sort,합치기 정렬
+574,merge sort,뭉쳐가며 정렬
+575,scaffolding code,테스터 코드
+576,scaffolding code,테스트 발판 코드
+577,reduction,수행
+578,reduction,계산
+579,reduction,줄이기
+580,linear function,직선 함수
+581,value bind,값 정의
+582,frontend,앞단 
+583,frontend,겉내용
+584,continuation,남은 일
+585,continuation,앞으로 할 계산
+586,continuation,마저할일
+587,continuation,앞으로 할 일
+588,continuation,후속 
+589,continuation,앞으로할일모두
+590,proof tree,증명나무
+591,continuation passing style transform,"마저 할 일 전달 변환, 마저할일전달 변환"
+592,continuation passing style transform,앞으로 할 일 전달 변환
+593,algebraic type,합승곱 타입
+594,algebraic type,더곱승 타입
+595,algebraic type,곱의 합 타입
+596,short-circuit evaluation,가로질러 계산하기
+597,short-circuit evaluation,금메달계산
+598,short-circuit evaluation,지름길계산
+599,short-circuit evaluation,단축계산
+600,evaluation strategy,계산방식
+601,evaluation strategy,계산법
+602,data constructor,자료 구성자
+603,data constructor,데이타 구성자
+604,completeness,완전함
+605,completeness,완전성
+606,completeness,빠뜨림없슴
+607,first-order equational logic,단순 등식논리
+608,foreign language interface,외부 언어와 연결하는 방법
+609,foreign language interface,다른 언어로 짜여진 프로그램과 연결하는 방법
+610,hierarchy,계층구조
+611,hierarchy,계층구조 형성하기
+612,determinisitc,한가지로 정해진
+613,determinisitc,모든게 정해진
+614,determinisitc,계산이 하나로 확실한
+615,determinisitc,계산이 한가지로 확실한
+616,recursive function,자기자신을 부르는 함수
+617,recursive function,재귀함수
+618,recursive function,자기호출함수
+619,equational reasoning,같은것을 따지기
+620,equational reasoning,같은것들로 따져가기
+621,correctness,맞음
+622,correctness,올바름
+623,api,나들목
+624,dereference,메모리읽기
+625,dereference,값꺼내기
+626,assertion,단언 
+627,assertion,떼쓰기
+628,assertion,주장 
+629,assertion,꼭  
+630,assertion,이랴해
+631,parity function,홀짝 함수
+632,line continuation,줄 걸쳐쓰기
+633,type constructor,타입 구성자
+634,de-sugar,설탕구조를 녹이다
+635,de-sugar,설탕 구조를 풀다
+636,out-of-order execution,새치기 실행
+637,variable,변수
+638,deduction,디덕
+639,deduction,반드시 이끌기
+640,computational complexity,계산 복잡도
+641,transaction,되거나 안 되거나
+642,transaction,해버리기
+643,transaction,담판 
+644,transaction,지르기
+645,postfix,뒤에 붙는
+646,model checking,모델 체킹
+647,model checking,맞나 확인하기
+648,model checking,모델 검증
+649,law of excluded middle,모아니면도
+650,law of excluded middle,둘중 하나
+651,law of excluded middle,양자택일
+652,bottom,바닥
+653,partial order,"일부분만 순서있는 집합, 부분순서집합"
+654,binding,명명하기
+655,binding,정의하기
+656,binding,이름짓기
+657,monad,모나드
+658,foreign key,연결 키
+659,metamorphic testing,입출력 규칙 테스팅
+660,metamorphic testing,"간접적인 테스트, 떠보는 테스트, 간접적으로 테스트하기, 떠보면서 테스트하기"
+661,metamorphic testing,간접테스트
+662,metamorphic testing,떠보는 테스트
+663,bug reproduction,버그 재현
+664,loop unrolling,반복문 풀어헤치기
+665,ancilla qubit,여분 큐빗
+666,ancilla qubit,보조 큐빗
+667,optimization,최적화
+668,optimization,"제일최고, 죽여주기, 아주딱"
+669,debugging,"고치기, 틀린것고치기, 오류고치기, 오류잡기, 오류수정, 디버깅"
+670,debugging,버그잡기
+671,complete lattice,"양끝을 모두 가진 격자, 양끝을 모두 가진 래티스"
+672,complete lattice,"완전 격자, 완전 래티스"
+673,complete lattice,"빠뜨림없는 격자, 빠뜨림없는 래티스"
+674,complete lattice,완전히짜인/잘짜인/단단히짜인 격자/래티스
+675,priority queue,우선큐
+676,lambda calculus,람다계산법
+677,context switch,맥락전환
+678,context switch,다른주변으로
+679,context switch,분위기전환
+680,context switch,상황전환
+681,idempotent,"부동성, 부동의"
+682,idempotent,"두번해봤자인, 한번으로충분한,"
+683,idempotent,맴돌이
+684,domain theory,의미공간 이론
+685,stack,스택
+686,polymorphic type,다형타입
+687,y combinator,"y람다식, 도돌이식, 뺑뺑이식, 자꾸자꾸식"
+688,integrity constraints,무결성 제약
+689,metadata,데이터의 데이터
+690,redex,들뜬식
+691,trade-off,"주고받기, 사고팔기, 거래"
+692,scheme,틀
+693,function expression,함수식
+694,undecidable,늘 정답내기가 컴퓨터로는 불가능한
+695,undecidable,컴퓨터로는 불가능한
+696,undecidable,컴퓨터로 늘 정답내기는 불가능한
+697,undecidable,컴퓨터로는 할 수 없는
+698,control structure,실행 흐름
+699,concrete semantics,구체적 의미
+700,concrete semantics,"의미, 의미구조"
+701,case analysis tactic,방식따지기
+702,case analysis tactic,경우따지기
+703,case analysis tactic,생성자별 분석
+704,data structure,자료 정리한 모양
+705,data structure,데이타 구조
+706,data structure,자료 구조
+707,class,물건틀
+708,class,클래스
+709,class,틀   
+710,abstract syntax tree,"핵심만 드러낸 문법구조, 핵심만 뽑은 문법구조"
+711,abstract syntax tree,추상 구문 트리
+712,temporal logic,시간논리
+713,constraint,제약
+714,program synthesis,프로그램 자동생성
+715,program synthesis,프로그램 합성
+716,simple type,단순 타입
+717,instrument,장치달기
+718,instrument,양념  
+719,instrument,코드 욱여넣기
+720,static analysis,정적분석
+721,static analysis,정적 프로그램분석
+722,constant,상수
+723,case expression,갈라치기식
+724,case expression,분기식
+725,case expression,선택식
+726,programming language,프로그래밍 언어
+727,dynamic type,실행중에 드러난 타입
+728,lexer,낱말파악기
+729,class method,붕어빵틀이 제공하는 함수
+730,class method,함수 
+731,free type name,묶이지않은 타입이름
+732,first-class function,함수가 특이하게 취급되지않는
+733,first-class function,차별받지않는 함수
+734,first-class function,다되는 함수
+735,first-class function,특이하게 취급되지않는 함수
+736,fixpoint,고정점
+737,fixed point,고정점
+738,total order,"모두가 순서있는 집합, 모두순서집합"
+739,work qubit,내부 큐빗
+740,amplitude amplification,진폭 집중
+741,denotational semantics,한마디 의미구조
+742,denotational semantics,조립식 의미구조
+743,denotational semantics,단도직입 의미구조
+744,denotational semantics,고정점방식 의미구조
+745,denotational semantics,해석 의미구조
+746,denotational semantics,궁극의 의미하는 바를 표현하는 의미구조
+747,denotational semantics,진상의미
+748,taint analysis,감염 분석
+749,taint analysis,번짐 분석
+750,stack overflow,스택 넘침
+751,natural join,일반적 조인
+752,operational semantics,실행 의미구조
+753,operational semantics,실행과정을 드러내는 의미구조
+754,operational semantics,실행되는 의미
+755,operational semantics,계산과정을 드러내는 의미구조
+756,complete partial order(CPO),"완전 부분순서집합, 끝을 모두 가진 부분순서집합"
+757,delta debugging,점진적 오류 위치 탐색
+758,sanitizer,프로그램 안전벨트
+759,sanitizer,프로그램 소독기
+760,sanitizer,자가진단기
+761,queue,큐
+762,queue,줄
+763,randomized algorithm,무작위 알고리즘
+764,crash triage,충돌 경위 조사
+765,crash triage,고장내기 진단
+766,crash triage,"고장진단, 고장감식"
+767,intermediate representation,거쳐가는 표현
+768,intermediate representation,경유하는 표현
+769,Hoare logic,호어 논리
+770,FIFO/LIFO,"입장순, 들어온순 / 최신순, 신입먼저"
+771,FIFO/LIFO,고참순/신입순
+772,FIFO/LIFO,짬밥순/신입순
+773,FIFO/LIFO,선입선출/후입선출
+774,FIFO/LIFO,도착순/착도순
+775,join,바로위
+776,bug,"오류, 실수"
+777,weak/relaxed memory,굼뜬메모리
+778,weak/relaxed memory,옛값과 새값의 경계가 느슨한 메모리
+779,weak/relaxed memory,시간순서가 느슨한 메모리
+780,weak/relaxed memory,느긋한 메모리
+781,weak/relaxed memory,느슨한 메모리 
+782,concolic execution,겉진짜실행
+783,concolic execution,진짜와 겉치레 함께실행
+784,concolic execution,동적 기호 실행
+785,symbolic execution,겉치레실행
+786,symbolic execution,겉실행
+787,symbolic execution,기호 실행
+788,context-free grammar,"눈치안보는 문법, 조건없는 문법, 무조건 문법"
+789,context-free grammar,맥락 무시 문법
+790,worklist,"할일주머니, 할일목록"
+791,meet,바로아래
+792,asynchronous programming,"여러가지를 동시실행하는 프로그램짜기, 동시실행 프로그램짜기, 동시실행 프로그래밍"
+793,asynchronous programming,실행순서없는 프로그램 짜기
+794,asynchronous programming,비순차 프로그래밍
+795,asynchronous programming,순서상관않는 프로그램짜기
+796,asynchronous programming,비동기 프로그래밍
+797,function argument,함수 인자
+798,dangling pointer,재활용된 메모리
+799,dangling pointer,오염된 메모리
+800,dangling pointer,헛 포인터
+801,dangling pointer,오리알 포인터
+802,convergent,수렴하는
+803,cache,중간저장소
+804,cache,"보따리, 가방, 주머니"
+805,cache,주머니
+806,meta programming,프로그램을 프로그램하기
+807,meta programming,프로그램을 다루는 프로그래밍
+808,meta programming,프로그래밍을 프로그래밍하기
+809,conjunctive normal form,그리고-조합 바른 식
+810,conjunctive normal form,그리고-조합 표준형
+811,consistency,일관성
+812,well-formed,제대로 생긴
+813,well-formed,잘생긴
+814,well-formed,잘 만든
+815,"probably approximately correct, PAC",대개거의맞는
+816,"probably approximately correct, PAC",얼추거의맞기
+817,"probably approximately correct, PAC",얼추거의맞는
+818,lattice,래티스
+819,function,함수
+820,structure expression,모듈식
+821,informal,느낌적인
+822,list,리스트
+823,associativity,결합순서
+824,associativity,방향성
+825,associativity,결합법칙
+826,deadlock,서로 막기
+827,deadlock,서로막힘
+828,least upper bound,최소윗뚜껑
+829,least upper bound,바로위
+830,least upper bound,최소상한
+831,least upper bound,최소천장
+832,dependent type,값에 기댄 타입
+833,dependent type,값을 끼고 정의한 타입
+834,dynamically typed language,계산중에 타입검사하는 언어
+835,dynamically typed language,실행중에 타입검사하는 언어
+836,dynamically typed language,돌때 타입검사하는 언어
+837,network,넷트웍
+838,network,네트워크
+839,static scoping,이름의 유효범위가 미리 결정된
+840,static scoping,실행전에 결정되는 이름의 실체
+841,syntactic sugar,설탕문법
+842,syntactic sugar,문법적 편의사항
+843,syntactic sugar,제로칼로리 문법
+844,syntactic sugar,설탕구조
+845,isomorphic,똑같은
+846,abstract method,함수 껍데기
+847,abstract method,껍데기 함수
+848,abstract method,허물 함수
+849,abstract method,함수 허물
+850,uncurrying,야금야금 함수를 단번 함수로
+851,uncurrying,언커링
+852,syntactic constraint,생김새 조건
+853,syntactic constraint,문법적인 제약
+854,subtype polymorphism,하위타입에 한정되는 다형성
+855,subtype polymorphism,하위타입 다형성
+856,subtype polymorphism,아래타입 다형성
+857,subtype polymorphism,아래타입에 한정되는 다형성
+858,primitive,기본
+859,control flow analysis,함수 흐름 분석
+860,control flow analysis,실행 흐름 분석
+861,iff,때면이
+862,iff,이면/일때만
+863,iff,이면면
+864,iff,이면-이려면
+865,iff,이면이
+866,object,물건
+867,widening,축지법
+868,deep neural net,깊은 신경망
+869,deep neural net,딥뉴럴넷
+870,annotation,"덧댄글, 덧글, 몇마디"
+871,annotation,"붙여쓰기, 붙여쓴글"
+872,dynamic dispatch,호출할 함수가 실행중에 결정되는
+873,dynamic dispatch,동적 함수호출
+874,parameterized module,일반화된 모듈
+875,pattern row,레코드 패턴
+876,ramdomization,무작위
+877,delayed evaluation,미루어 계산하기
+878,delayed evaluation,값 계산을 최대한 미루기
+879,dynamic scoping,이름의 유효범위가 실행 중에 결정되는
+880,dynamic scoping,실행중에 드러나는 이름의 실체
+881,dynamic scoping,동적으로 유효범위 정하기
+882,alias,별명
+883,type instantiation,타입 틀 구체화
+884,type instantiation,타입 틀 적용
+885,mutual recursive,서로 호출하는
+886,mutual recursive,서로 맞물려서 호출하는
+887,mutual recursive,맞재귀
+888,polymorphic,여러 타입을 가지는
+889,polymorphic,여러 모양의
+890,polymorphic,모양이 다양한
+891,polymorphic,다형의
+892,coroutine,협동 과정
+893,functor,모듈 만드는 함수
+894,functor,모듈함수
+895,equality saturation,동일식 다모으기
+896,equality saturation,동일식 모두탐색
+897,equality saturation,동일식 전부 찾아내기
+898,incompleteness theorem,불완전성 정리
+899,incompleteness theorem,기계적인 방식으로는 늘 빠뜨린게 있다는 정리
+900,binary,두개의
+901,bounded probabilistic polynomial,오류율을 잡아둘 수 있는 확률형 다항
+902,linear logic,일회성추적 논리
+903,safety property,늘 성질
+904,safety property,늘 유지되는 성질
+905,safety property,내내 성질
+906,safety property,항상 유지되는 성질
+907,safety property,항상 성질
+908,greatest lower bound,최대밑뚜껑
+909,greatest lower bound,바로아래
+910,greatest lower bound,최대 하한
+911,greatest lower bound,최대 바닥
+912,polyvariant analysis,여러개로 요약하는 분석
+913,polyvariant analysis,다수의 프로그램 흐름을 하나이상으로 요약하는 분석
+914,polyvariant analysis,다대다 분석
+915,polyvariant analysis,다형성을 가지는 분석
+916,solver,"문제풀기, 답내기, 답정기"
+917,solver,"풀이기, 풀개"
+918,solver,검사기
+919,solver,계산기
+920,abstraction hierarchy,요약 단계
+921,abstraction hierarchy,핵심간추린 것으로 차곡차곡 쌓기
+922,abstraction hierarchy,속내용 감추며 차곡차곡 쌓기
+923,evaluation,계산
+924,evaluation,값계산
+925,evaluation,실행
+926,homomorphic,동형의
+927,homomorphic,생긴구조가 같은
+928,parametric polymorphism,모든타입에 열려있는 다형성
+929,parametric polymorphism,"다형성, 타입상관 없음, 타입상관 안함"
+930,parametric polymorphism,모든타입 다형성
+931,disjunctive normal form,또는-조합 바른식
+932,disjunctive normal form,또는-조합 표준형
+933,deployment,배포 
+934,match,어울리기
+935,match,패턴에 맞추기
+936,incomplete,빠진게 있는
+937,incomplete,빠뜨린게 있는
+938,incomplete,불완전한
+939,incomplete,완전하지않은
+940,scope,유효범위
+941,mono-variant analysis,다대일 분석
+942,mono-variant analysis,다수의 프로그램 흐름을 하나로 요약하는 분석
+943,Boolean expression,부울식
+944,ownership,소유권
+945,compositionality,조립식
+946,sparse vector,듬성듬성한 벡터
+947,sparse vector,거의 빈 벡터
+948,lexical scope,생김새로 결정되는 유효 범위
+949,node,노드
+950,semantic operator,"의미연산자, 의미 연산자"
+951,contra-variant,반대쪽변환
+952,contra-variant,거슬러 변하기
+953,contra-variant,반대 변환
+954,contra-variant,거슬러 변하는
+955,tail recursive,끝재귀
+956,tail recursive,자기 호출이 마지막인
+957,tail recursive,마지막에 자기자신을 부르는
+958,tail recursive,꼬리재귀
+959,polymorphism,타입 적응하는
+960,polymorphism,"타입상관없음, 타입상관안함"
+961,polymorphism,다형성
+962,ad-hoc polymorphism,겉보기 다형성
+963,ad-hoc polymorphism,"타입따라 변하기, 타입따라 변하는, 타입따라 다른 "
+964,ad-hoc polymorphism,타입적응하는 
+965,ad-hoc polymorphism,임기응변 다형성
+966,ad-hoc polymorphism,가짜 다형성
