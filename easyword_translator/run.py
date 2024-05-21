@@ -108,7 +108,6 @@ def translate(sentence: str) -> str:
 
     retries = 0
     while "[" not in refined_translation or "]" not in refined_translation:
-        print(refined_translation)
         retries += 1
         if retries > MAX_RETRIES:
             break

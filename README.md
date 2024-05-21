@@ -1,3 +1,11 @@
+---
+title: easyword-translator
+app_file: easyword_translator/run.py
+sdk: gradio
+sdk_version: 4.31.4
+python_version: 3.12.2
+---
+
 # 쉬운 전문용어 번역기
 
 ## 실행 방법
