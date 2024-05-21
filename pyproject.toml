@@ -6,7 +6,7 @@ authors = ["Jay Lee <jaeho.lee@snu.ac.kr>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 gradio = "^4.31.4"
 pandas = "^2.2.2"
 langchain-core = "^0.2.0"

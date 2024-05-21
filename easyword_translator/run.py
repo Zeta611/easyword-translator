@@ -88,7 +88,7 @@ def translate(sentence: str) -> str:
         ("ai", initial_translation),
         (
             "human",
-            f"방금 번역한 문장에서 '{", ".join(used_jargons)}' 중 사용한 용어가 있다면, 어떤 용어들로 번역했는지 말해줘. 사용하지 않은 용어들은 무시해도 돼.",
+            f"방금 번역한 문장에서 '{', '.join(used_jargons)}' 중 사용한 용어가 있다면, 어떤 용어들로 번역했는지 말해줘. 사용하지 않은 용어들은 무시해도 돼.",
         ),
     ]
     response = chainer(messages).invoke({})
