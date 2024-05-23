@@ -9,7 +9,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_upstage import ChatUpstage
 from rapidfuzz import process
 
-import fitz
+import pymupdf
 
 warnings.filterwarnings("ignore")
 
@@ -127,7 +127,12 @@ def translate(sentence: str) -> str:
                 f"전문용어를 번역했으면 반드시 원어를 괄호[]에 넣어서 따라 붙여야 해. '실행흐름[control]'처럼. 방금 번역한 '{refined_translation}'에서, 원래 문장 '{sentence}'에 사용된 원어를 용어 바로 뒤에 괄호 []에 넣어서 따라 붙여줘.",
             ),
         ]
-        refined_translation = chainer(messages).invoke({})
+        try:
+            refined_translation = chainer(messages).invoke({})
+        except Exception as e:
+            logger.error(e)
+            break
+
         logger.info(refined_translation)
 
     refined_translation = refined_translation.replace("[", "(").replace("]", ")")
@@ -140,7 +145,7 @@ class PDFFile:
 
     def read_pdf(self, file_path: str) -> str:
         # Open the PDF file
-        document = fitz.open(file_path)
+        document = pymupdf.open(file_path)
         text = ""
 
         # Iterate through the pages
@@ -240,9 +245,9 @@ with gr.Blocks() as demo:
             label="Upload PDF",
             file_types=[".pdf"],
         )
-        uplaod_file_list_box = gr.File(label="Uploaded Files")
+        upload_file_list_box = gr.File(label="Uploaded Files")
 
-        upload_button.upload(pdf_file.upload_file, upload_button, uplaod_file_list_box)
+        upload_button.upload(pdf_file.upload_file, upload_button, upload_file_list_box)
 
         run_translator = gr.Interface(
             fn=pdf_file.transalte_pdf,

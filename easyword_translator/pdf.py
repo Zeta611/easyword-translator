@@ -1,9 +1,9 @@
-import fitz  # PyMuPDF
+import pymupdf  # PyMuPDF
 
 
 def read_pdf(file_path):
     # Open the PDF file
-    document = fitz.open(file_path)
+    document = pymupdf.open(file_path)
     text = ""
 
     # Iterate through the pages
