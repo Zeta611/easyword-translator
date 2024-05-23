@@ -11,7 +11,7 @@ python_version: 3.11.9
 ## 실행 방법
 
 ```sh
-dotenv poetry run python easyword_translator/run.py
+dotenv run poetry run python easyword_translator/run.py
 ```
 
 ## 스크린샷

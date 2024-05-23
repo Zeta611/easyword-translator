@@ -14,6 +14,13 @@ warnings.filterwarnings("ignore")
 
 UPSTAGE_API_KEY = os.environ["UPSTAGE_API_KEY"]
 
+TITLE = "쉬운 전문용어 번역기"
+DESCRIPTION = """
+우리가 easyword.kr에 모은 쉬운 전문용어들을 사용하여, 자동으로 문장을 번역해줍니다.
+번역을 자동으로 하기 위해 업스테이지의 Solar 대형 언어 모델 (large language model, LLM)을 사용합니다.
+우리 번역기는 최대한 쉬운 전문용어 원칙을 따르며, 원문 전문용어는 번역된 쉬운말 다음 괄호 안에 따라붙입니다.
+""".strip()
+
 LIMIT_FACTOR = 2.5
 SCORE_CUTOFF = 60.0
 MAX_RETRIES = 4
@@ -100,7 +107,7 @@ def translate(sentence: str) -> str:
         ("ai", response),
         (
             "human",
-            f"이번에는 처음 번역했던 문장을 '{sentence}'를 다시 번역해주는데, 다음 목록에 나온 쉬운 전문용어 번역 예시를 참고해서 번역을 해줘: '{recommendations}' 사용하지 않은 용어들은 무시해도 돼. 추가 설명 없이 문장만 번역해.",
+            f"이번에는 처음 번역했던 문장을 '{sentence}'를 다시 번역해주는데, 다음 목록에 나온 쉬운 전문용어 번역 예시를 참고해서 번역을 해줘: '{recommendations}' 사용하지 않은 용어들은 무시해도 돼. 추가 설명 없이 문장만 번역해. 사용된 원어를 용어 바로 뒤에 괄호 []에 넣어서 따라 붙여줘.",
         ),
     ]
     refined_translation = chainer(messages).invoke({})
@@ -115,12 +122,13 @@ def translate(sentence: str) -> str:
             ("ai", refined_translation),
             (
                 "human",
-                f"전문용어를 번역했으면 반드시 원어를 괄호[]에 넣어서 따라 붙여야 해. '실행흐름[control]'처럼. 방금 번역한 '{refined_translation}'에서, 원래 문장 '{sentence}'에 사용된 원어를 괄호에 넣어서 따라 붙여줘.",
+                f"전문용어를 번역했으면 반드시 원어를 괄호[]에 넣어서 따라 붙여야 해. '실행흐름[control]'처럼. 방금 번역한 '{refined_translation}'에서, 원래 문장 '{sentence}'에 사용된 원어를 용어 바로 뒤에 괄호 []에 넣어서 따라 붙여줘.",
             ),
         ]
         refined_translation = chainer(messages).invoke({})
         logger.info(refined_translation)
 
+    refined_translation = refined_translation.replace("[", "(").replace("]", ")")
     return refined_translation
 
 
@@ -139,8 +147,8 @@ with gr.Blocks() as demo:
                 "In computing and computer programming, exception handling is the process of responding to the occurrence of exceptions – anomalous or exceptional conditions requiring special processing – during the execution of a program.",
                 "The term redex, short for reducible expression, refers to subterms that can be reduced by one of the reduction rules.",
             ],
-            title="쉬운 전문용어 번역기",
-            description="컴퓨터과학 및 공학 분야의 전문용어를 쉬운 전문용어로 번역해줍니다.",
+            title=TITLE,
+            description=DESCRIPTION,
         )
 
 
