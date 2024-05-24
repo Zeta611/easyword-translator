@@ -77,6 +77,9 @@ SAMPLE_TRANSLATION = "값중심 프로그래밍[functional programming]에서, �
 
 
 def translate(sentence: str) -> str:
+    # remove "{", "}" in sentence.
+    sentence = sentence.replace("{", "").replace("}", "")
+
     messages = [
         SystemMessage(content=SYSTEM_PROMPT),
         HumanMessage(
