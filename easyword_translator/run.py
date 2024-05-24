@@ -6,6 +6,7 @@ import gradio as gr
 import pandas as pd
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from langchain_upstage import ChatUpstage
 from rapidfuzz import process
 
@@ -77,15 +78,13 @@ SAMPLE_TRANSLATION = "값중심 프로그래밍[functional programming]에서, �
 
 def translate(sentence: str) -> str:
     messages = [
-        ("system", SYSTEM_PROMPT),
-        (
-            "human",
-            f"전문 용어를 번역할 때는 반드시 원어를 괄호[]에 넣어서 따라 붙여야 해. 이 문장을 번역해줘: '{SAMPLE_SENTENCE}'",
+        SystemMessage(content=SYSTEM_PROMPT),
+        HumanMessage(
+            content=f"전문 용어를 번역할 때는 반드시 원어를 괄호[]에 넣어서 따라 붙여야 해. 이 문장을 번역해줘: '{SAMPLE_SENTENCE}'"
         ),
-        ("ai", SAMPLE_TRANSLATION),
-        (
-            "human",
-            f"전문 용어를 번역할 때는 반드시 원어를 괄호[]에 넣어서 따라 붙여야 해. 이 문장을 번역해줘: '{sentence}'",
+        AIMessage(content=SAMPLE_TRANSLATION),
+        HumanMessage(
+            content=f"전문 용어를 번역할 때는 반드시 원어를 괄호[]에 넣어서 따라 붙여야 해. 이 문장을 번역해줘: '{sentence}'"
         ),
     ]
 
@@ -94,10 +93,9 @@ def translate(sentence: str) -> str:
 
     used_jargons = find_jargons(sentence)
     messages += [
-        ("ai", initial_translation),
-        (
-            "human",
-            f"방금 번역한 문장에서 '{', '.join(used_jargons)}' 중 사용한 용어가 있다면, 어떤 용어들로 번역했는지 말해줘. 사용하지 않은 용어들은 무시해도 돼.",
+        AIMessage(content=initial_translation),
+        HumanMessage(
+            content=f"방금 번역한 문장에서 '{', '.join(used_jargons)}' 중 사용한 용어가 있다면, 어떤 용어들로 번역했는지 말해줘. 사용하지 않은 용어들은 무시해도 돼."
         ),
     ]
     response = chainer(messages).invoke({})
@@ -106,10 +104,9 @@ def translate(sentence: str) -> str:
     recommendations = ", ".join(recommend_prompt(jargon) for jargon in used_jargons)
 
     messages += [
-        ("ai", response),
-        (
-            "human",
-            f"이번에는 처음 번역했던 문장을 '{sentence}'를 다시 번역해주는데, 다음 목록에 나온 쉬운 전문용어 번역 예시를 참고해서 번역을 해줘: '{recommendations}' 사용하지 않은 용어들은 무시해도 돼. 추가 설명 없이 문장만 번역해. 사용된 원어를 용어 바로 뒤에 괄호 []에 넣어서 따라 붙여줘.",
+        AIMessage(content=response),
+        HumanMessage(
+            content=f"이번에는 처음 번역했던 문장을 '{sentence}'를 다시 번역해주는데, 다음 목록에 나온 쉬운 전문용어 번역 예시를 참고해서 번역을 해줘: '{recommendations}' 사용하지 않은 용어들은 무시해도 돼. 추가 설명 없이 문장만 번역해. 사용된 원어를 용어 바로 뒤에 괄호 []에 넣어서 따라 붙여줘."
         ),
     ]
     refined_translation = chainer(messages).invoke({})
@@ -121,10 +118,9 @@ def translate(sentence: str) -> str:
         if retries > MAX_RETRIES:
             break
         messages += [
-            ("ai", refined_translation),
-            (
-                "human",
-                f"전문용어를 번역했으면 반드시 원어를 괄호[]에 넣어서 따라 붙여야 해. '실행흐름[control]'처럼. 방금 번역한 '{refined_translation}'에서, 원래 문장 '{sentence}'에 사용된 원어를 용어 바로 뒤에 괄호 []에 넣어서 따라 붙여줘.",
+            AIMessage(content=refined_translation),
+            HumanMessage(
+                content=f"전문용어를 번역했으면 반드시 원어를 괄호[]에 넣어서 따라 붙여야 해. '실행흐름[control]'처럼. 방금 번역한 '{refined_translation}'에서, 원래 문장 '{sentence}'에 사용된 원어를 용어 바로 뒤에 괄호 []에 넣어서 따라 붙여줘."
             ),
         ]
         try:
