@@ -9,6 +9,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_upstage import ChatUpstage
 from rapidfuzz import process
 
+import pymupdf
+
 warnings.filterwarnings("ignore")
 
 
@@ -125,15 +127,102 @@ def translate(sentence: str) -> str:
                 f"전문용어를 번역했으면 반드시 원어를 괄호[]에 넣어서 따라 붙여야 해. '실행흐름[control]'처럼. 방금 번역한 '{refined_translation}'에서, 원래 문장 '{sentence}'에 사용된 원어를 용어 바로 뒤에 괄호 []에 넣어서 따라 붙여줘.",
             ),
         ]
-        refined_translation = chainer(messages).invoke({})
+        try:
+            refined_translation = chainer(messages).invoke({})
+        except Exception as e:
+            logger.error(e)
+            break
+
         logger.info(refined_translation)
 
     refined_translation = refined_translation.replace("[", "(").replace("]", ")")
     return refined_translation
 
 
+class PDFFile:
+    def __init__(self):
+        self.file_list = []
+
+    def read_pdf(self, file_path: str) -> str:
+        # Open the PDF file
+        document = pymupdf.open(file_path)
+        text = ""
+
+        # Iterate through the pages
+        for page_num in range(len(document)):
+            # Extract text from each page
+            page = document.load_page(page_num)
+            text += page.get_text()
+
+        # Close the PDF document
+        document.close()
+
+        return text
+
+    def remove_line_breaks(self, text: str) -> list[str]:
+        #  remove only single line breaks, not paragraphs
+        # find line breaks and it is not followed by a period
+        for i in range(len(text)):
+            if i == 0 or i == len(text) - 1:
+                continue
+            if text[i] == "\n" and text[i - 1] != "." and text[i + 1] != "\n":
+                text = text[:i] + " " + text[i + 1 :]
+        return text
+
+    def upload_file(self, file_path: str) -> list[str]:
+        self.file_list.append(file_path)
+        return self.file_list
+
+    def transalte_pdf(
+        self,
+        remove_line_breaks: bool,
+        save_before_translation: bool,
+    ) -> str:
+        if not self.file_list:
+            return "No file uploaded yet."
+
+        file_out_list = []
+        for file in self.file_list:
+            directory = os.path.dirname(file)
+            filename = os.path.basename(file)
+
+            # remove extension
+            filename = ".".join(filename.split(".")[:-1])
+            pdf_text = self.read_pdf(file)
+            if remove_line_breaks:
+                pdf_text = self.remove_line_breaks(pdf_text)
+
+            if save_before_translation:
+                with open(f"{directory}/{filename}_pre.txt", "w") as f:
+                    f.write(pdf_text)
+            file_out_list.append(f"{directory}/{filename}_pre.txt")
+
+            # translation = translate(pdf_text)
+            # Translation with divide and conquer with 50 sentences
+            translation = ""
+            # seperate the text into sentences
+            sentences = pdf_text.split(".")
+            for i in range(0, len(sentences), 50):
+                translation += translate(".".join(sentences[i : i + 50])) + ". "
+
+            with open(f"{directory}/{filename}_translated.txt", "w") as f:
+                f.write(translation)
+            file_out_list.append(f"{directory}/{filename}_translated.txt")
+
+        self.file_list = []
+        # Zip the files
+        # import zipfile
+
+        # with zipfile.ZipFile(f"{directory}/translated_files.zip", "w") as z:
+        #     for file in file_out_list:
+        #         z.write(file)
+
+        # return f"{directory}/translated_files.zip"
+        return file_out_list
+
+
 with gr.Blocks() as demo:
-    with gr.Tab("CHAT"):
+    with gr.Tab("TEXT"):
         chatbot = gr.Interface(
             fn=translate,
             inputs=gr.Textbox(label="Enter your text"),
@@ -149,6 +238,24 @@ with gr.Blocks() as demo:
             ],
             title=TITLE,
             description=DESCRIPTION,
+        )
+    with gr.Tab("PDF"):
+        pdf_file = PDFFile()
+        upload_button = gr.UploadButton(
+            label="Upload PDF",
+            file_types=[".pdf"],
+        )
+        upload_file_list_box = gr.File(label="Uploaded Files")
+
+        upload_button.upload(pdf_file.upload_file, upload_button, upload_file_list_box)
+
+        run_translator = gr.Interface(
+            fn=pdf_file.transalte_pdf,
+            inputs=[
+                gr.Checkbox(label="Remove line breaks"),
+                gr.Checkbox(label="Save before translation"),
+            ],
+            outputs=[gr.File(label="Download Translated Files")],
         )
 
 
