@@ -56,6 +56,7 @@ def recommend_prompt(jargon: str) -> str:
 
 
 llm = ChatUpstage()
+llm = llm | StrOutputParser()
 
 
 def chainer(messages):
@@ -78,7 +79,7 @@ SAMPLE_TRANSLATION = "값중심 프로그래밍[functional programming]에서, �
 
 def translate(sentence: str) -> str:
     # remove "{", "}" in sentence.
-    sentence = sentence.replace("{", "").replace("}", "")
+    # sentence = sentence.replace("{", "").replace("}", "")
 
     messages = [
         SystemMessage(content=SYSTEM_PROMPT),
@@ -91,7 +92,7 @@ def translate(sentence: str) -> str:
         ),
     ]
 
-    initial_translation = chainer(messages).invoke({})
+    initial_translation = llm.invoke(messages)
     logger.info(initial_translation)
 
     used_jargons = find_jargons(sentence)
@@ -101,7 +102,7 @@ def translate(sentence: str) -> str:
             content=f"방금 번역한 문장에서 '{', '.join(used_jargons)}' 중 사용한 용어가 있다면, 어떤 용어들로 번역했는지 말해줘. 사용하지 않은 용어들은 무시해도 돼."
         ),
     ]
-    response = chainer(messages).invoke({})
+    response = llm.invoke(messages)
     logger.info(response)
 
     recommendations = ", ".join(recommend_prompt(jargon) for jargon in used_jargons)
@@ -112,7 +113,7 @@ def translate(sentence: str) -> str:
             content=f"이번에는 처음 번역했던 문장을 '{sentence}'를 다시 번역해주는데, 다음 목록에 나온 쉬운 전문용어 번역 예시를 참고해서 번역을 해줘: '{recommendations}' 사용하지 않은 용어들은 무시해도 돼. 추가 설명 없이 문장만 번역해. 사용된 원어를 용어 바로 뒤에 괄호 []에 넣어서 따라 붙여줘."
         ),
     ]
-    refined_translation = chainer(messages).invoke({})
+    refined_translation = llm.invoke(messages)
     logger.info(refined_translation)
 
     retries = 0
@@ -127,7 +128,7 @@ def translate(sentence: str) -> str:
             ),
         ]
         try:
-            refined_translation = chainer(messages).invoke({})
+            refined_translation = llm.invoke(messages)
         except Exception as e:
             logger.error(e)
             break
